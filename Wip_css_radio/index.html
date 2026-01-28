@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container" style="display: block">
+      <div class="radio-container">
+        <div class="header">Radio Manager</div>
+        <div class="raio-memory-box">
+          <div class="radio-mem">Chanel Record</div>
+          <div class="recording">1000 Mhz</div>
+        </div>
+        <div class="chanel-input">
+          <input
+            type="number"
+            placeholder="1 - 999"
+            max="999"
+            min="1"
+            id="channel"
+          />
+        </div>
+        <div class="radio-sound-container">
+          <div class="sound-desc">Radio Sound [50]</div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            onchange="ChangeVolume(this.value)"
+            id="volume"
+          />
+        </div>
+        <div class="radio-interact-container">
+          <div class="radio-interact disconnect" onclick="ConnectRadio()">
+            DISCONNECT [ENTER]
+          </div>
+          <!-- <div class="radio-interact connect">CONNECT</div> -->
+        </div>
+        <!-- <img src="./img/radio.png" alt="" class="radio"> -->
+
+        <!-- <div class="channel">
+                    <input id="channel" type="number" name="channel" min="1" max="999" placeholder="1-999">
+                </div>
+                <div id="submit" class="left" title="CONN"></div>
+                <div id="disconnect" class="left" title="DISC"></div>
+                <div id="volumeDown" class="left" title="VOL-"></div>
+                <div id="volumeUp" title="VOL+"></div>    
+                <div id="decreaseradiochannel" class="left" title="PREV"></div>
+		        <div id="increaseradiochannel" class="left" title="NEXT"></div>
+                <div id="poweredOff" class="left" title="OFF"></div>	 -->
+      </div>
+    </div>
+    <div class="container2" style="display: block">
+      <!-- <div class="header">
+                <div class="label"><iconify-icon icon="icon-park-twotone:radio-nanny"></iconify-icon> Radio</div>
+                <div class="count">1</div>
+                <div class="signal">
+                    Signal <span id="signal">100</span> Mhz
+                </div>
+            </div> -->
+      <div class="header">
+        <div class="header-text">RADIO</div>
+        <div class="header-flex">
+          <div class="signal"><span id="signal">999</span> Mhz</div>
+          <div class="online">
+            <div class="count">25</div>
+            <img src="./img/online.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="list" style="display: flex">
+        <!-- Open ด้วย style="display: flex-->
+        <div class="user">
+          <div class="line"></div>
+          <div class="num">ID:1</div>
+          <div class="name">Teenine Wip</div>
+          <img src="./img/voice.svg" alt="" />
+        </div>
+        <div class="user">
+          <div class="line"></div>
+          <div class="num">ID:1</div>
+          <div class="name">Teenine Wip</div>
+          <img src="./img/voice.svg" alt="" />
+        </div>
+        <div class="user">
+          <div class="line"></div>
+          <div class="num">ID:1</div>
+          <div class="name">Teenine Wip</div>
+          <img src="./img/voice.svg" alt="" />
+        </div>
+        <div class="user">
+          <div class="line"></div>
+          <div class="num">ID:1</div>
+          <div class="name">Teenine Wip</div>
+          <img src="./img/voice.svg" alt="" />
+        </div>
+        <div class="user active">
+          <div class="line"></div>
+          <div class="num">ID:99999</div>
+          <div class="name">Teenine Wipppppppppppp</div>
+          <img src="./img/voice.svg" alt="" />
+        </div>
+      </div>
+      <div class="footer">
+        <p>เปิด/ปิด</p>
+        <p class="j">[ J ]</p>
+      </div>
+    </div>
+    <div class="toast">
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wippppppppppp</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wip</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wippppppppppp</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wip</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wippppppppppp</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wip</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wip</div>
+        </div>
+      </div>
+      <div class="wrapper wrapper-${id}">
+        <div class="user active">
+          <div class="wave-container">
+            <iconify-icon icon="eos-icons:three-dots-loading"></iconify-icon>
+          </div>
+          <div class="name">Teenine Wippppppppppp</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>
