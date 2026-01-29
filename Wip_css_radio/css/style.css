@@ -448,7 +448,7 @@ input[type="number"] {
 }
 
 .toast .wrapper .user .wave-container iconify-icon {
-  font-size: calc(30 * var(--px));
+  font-size: calc(40 * var(--px));
   color: var(--color-primary);
   opacity: .85;
   animation: dot-flicker 1.4s steps(3) infinite;
