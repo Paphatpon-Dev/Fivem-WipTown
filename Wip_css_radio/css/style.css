@@ -235,9 +235,9 @@ input[type="number"] {
 
 .container .radio-container .radio-interact-container .radio-interact {
     padding: calc(15*var(--px)) calc(20*var(--px));
-    border-radius: 10px;
+    border-radius: calc(20*var(--px));
     font-weight: 600;
-    font-size: 14px;
+    font-size: calc(18*var(--px));
     cursor: pointer;
     user-select: none;
     transition: all .25s ease;
